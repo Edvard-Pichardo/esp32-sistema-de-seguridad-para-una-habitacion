@@ -85,3 +85,6 @@ El acceso al sistema está restringido mediante validación del ID de usuario au
 - Integración de cámara
 
 - Automatización avanzada
+
+## Notas finales
+- Las credenciales deben configurarse manualmente antes de compilar.
