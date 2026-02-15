@@ -32,35 +32,41 @@ El sistema permite activar alarmas, recibir notificaciones de intrusión, consul
 
 ## Comandos del bot
 
-Comando para iniciar el bot:  /start
+- Comando para iniciar el bot:
 
-Comando para revisar la configuración general del sistema: /status
+/start
 
-Comandos para activar/desactivar la alarma de seguridad de la habitación: 
+- Comando para revisar la configuración general del sistema:
+
+/status
+
+- Comandos para activar/desactivar la alarma de seguridad de la habitación: 
 
 /alarma_on
 
 /alarma_off
 
-Comandos para activar/desactivar la alarma de seguridad de la caja fuerte:
+- Comandos para activar/desactivar la alarma de seguridad de la caja fuerte:
 
 /caja_fuerte_on
 
 /caja_fuerte_off
 
-Comandos para encender/apagar las luces automaticas, en presencia de alguna persona, dentro de la habitación:
+- Comandos para encender/apagar las luces automaticas, en presencia de alguna persona, dentro de la habitación:
 
 /luz_automatica_on
 
 /luz_automatica_off
 
-Comandos para encender/apagar las luces de la habitación:
+- Comandos para encender/apagar las luces de la habitación:
 
 /luces_on
 
 /luces_off
 
-Comando para medir la temperatura y humedad de la habitación: /clima
+- Comando para medir la temperatura y humedad de la habitación:
+
+/clima
 
 ## Arquitectura del sistema
 
