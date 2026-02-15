@@ -123,13 +123,13 @@ El ESP32 funciona como nodo IoT autónomo que integra adquisición de datos, ló
                 │  Control embebido (edge) │
                 │                          │
                 │  ┌────────────────────┐  │
-Sensores ──────▶│  │  Lógica de control │  │──────▶ Actuadores
+Sensores ──────>│  │  Lógica de control │  │──────> Actuadores
                 │  └────────────────────┘  │
                 │                          │
-                │ PIR  → movimiento        │ LEDs → iluminación
-                │ IR   → apertura          │ Buzzer → alarma
-                │ LDR  → nivel de luz      │
-                │ DHT11→ temp/humedad      │
+                │ PIR  - movimiento        │ LEDs - iluminación
+                │ IR   - apertura          │ Buzzer - alarma
+                │ LDR  - nivel de luz      │
+                │ DHT11 - temp/humedad     │
                 └──────────────────────────┘
 
 - Adquisición
