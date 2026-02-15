@@ -103,5 +103,47 @@ El acceso al sistema está restringido mediante validación del ID de usuario au
 
 - Automatización avanzada
 
-## Notas finales
+## Notas importantes
 - Las credenciales deben configurarse manualmente antes de compilar.
+
+
+## Flujo operativo del sistema
+
+El ESP32 funciona como nodo IoT autónomo que integra adquisición de datos, lógica de control y comunicación remota segura. La interacción con el usuario se realiza mediante la API de Telegram, mientras que las decisiones operativas se ejecutan localmente en el dispositivo.
+
+
+                ┌──────────────────────────┐
+                │        Usuario           │
+                │   App Telegram (bot)     │
+                └────────────┬─────────────┘
+                             │ HTTPS (WiFi)
+                             ▼
+                ┌──────────────────────────┐
+                │          ESP32           │
+                │  Control embebido (edge) │
+                │                          │
+                │  ┌────────────────────┐  │
+Sensores ──────▶│  │  Lógica de control │  │──────▶ Actuadores
+                │  └────────────────────┘  │
+                │                          │
+                │ PIR  → movimiento        │ LEDs → iluminación
+                │ IR   → apertura          │ Buzzer → alarma
+                │ LDR  → nivel de luz      │
+                │ DHT11→ temp/humedad      │
+                └──────────────────────────┘
+
+- Adquisición
+
+El ESP32 lee continuamente: movimiento (PIR), apertura (IR), luz ambiental (LDR) y temperatura/humedad (DHT11).
+
+- Procesamiento local
+
+El firmware evalúa condiciones: intrusión, baja iluminación + presencia, temperatura elevada y comandos remotos.
+
+- Acción física
+
+Activa buzzer, enciende/apaga LEDs y envía alertas
+
+- Interacción remota
+
+El usuario controla y consulta el sistema mediante comandos Telegram.
