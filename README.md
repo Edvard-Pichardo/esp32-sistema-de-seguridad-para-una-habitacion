@@ -30,6 +30,23 @@ El sistema permite activar alarmas, recibir notificaciones de intrusión, consul
 
 - Comunicación segura HTTPS con Telegram
 
+## Lista de componentes 
+- ESP32
+
+- Sensor PIR (detección de movimiento)
+
+- Sensor infrarrojo
+
+- Sensor DHT11
+
+- Fotoresistencia (LDR)
+
+- 5 LEDs
+
+- Buzzer
+
+- Resistencias varias
+
 ## Comandos del bot
 
 - Comando para iniciar el bot:
